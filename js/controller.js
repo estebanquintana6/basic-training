@@ -12,4 +12,13 @@ app.controller("appctrl", function($scope){
       $scope.points.push(point);
     };
 
+
+    var chart = Highcharts.chart('container', {
+        series: [{
+            data: $scope.points
+        }],
+      	// ... more options - see http://api.highcharts.com/highcharts
+    });
+
+
 });

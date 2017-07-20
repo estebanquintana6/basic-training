@@ -5,6 +5,8 @@
       <meta charset="utf-8">
       <title>Linear iterpolation</title>
       <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/node_modules/highcharts/css/highcharts.css">
+
   </head>
   <body ng-controller="appctrl" class="container">
     <header>
@@ -29,11 +31,19 @@
     <div class="row">
         <h3>Points available</h3>
 
-        <p>{{points}}</p>
+        <ul>
+          <li ng-repeat="point in points">{{"[ " + point.x + " , " + point.y + " ]"}}</li>
+        </ul>
     </div>
+
+    <div class="row">
+        <div id="container"></div>
+    </div>
+
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/js/controller.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/node_modules/highcharts/js/highcharts.js"
   </body>
 
 </html>
