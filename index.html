@@ -11,18 +11,25 @@
         <!-- Valiendo chorizo -->
         <h2 class="text-center">{{appTitle}}</h2>
     </header>
-    <div class="col-md-4 offset-md-4">
-        <form>
-          <div class="form-group">
-            <label for="email">Enter an 'x' value: </label>
-            <input type="email" class="form-control" id="email">
-          </div>
-          <div class="form-group">
-            <label for="pwd">Enter a 'y' value: :</label>
-            <input type="password" class="form-control" id="pwd">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+    <div class="row">
+        <div class="col-md-4">
+            <form>
+              <div class="form-group">
+                <label for="x">Enter an 'x' value: </label>
+                <input type="number" class="form-control" id="x" ng-model="point.x">
+              </div>
+              <div class="form-group">
+                <label for="y">Enter a 'y' value: :</label>
+                <input type="number" class="form-control" id="y" ng-model="point.y">
+              </div>
+              <button type="submit" class="btn btn-default" ng-click="submitPoint()">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <h3>Points available</h3>
+
+        <p>{{points}}</p>
     </div>
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/js/controller.js"></script>
