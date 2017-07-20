@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 
   <head>
       <meta charset="utf-8">
       <title>Linear iterpolation</title>
       <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
   </head>
-  <body>
+  <body ng-controller="appctrl" class="container">
     <header>
-        <h2>Valiendo chorizo</h2>
+        <!-- Valiendo chorizo -->
+        <h2 class="text-center">{{appTitle}}</h2>
     </header>
-    <h2></h2>
+    <div class="col-md-4 offset-md-4">
+        <form>
+          <div class="form-group">
+            <label for="email">Enter an 'x' value: </label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Enter a 'y' value: :</label>
+            <input type="password" class="form-control" id="pwd">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
     <script src="/node_modules/angular/angular.js"></script>
+    <script src="/js/controller.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
   </body>
 
