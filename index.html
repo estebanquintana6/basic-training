@@ -31,7 +31,7 @@
             <form>
               <div class="form-group">
                 <label for="x">Enter an 'x' value to calculate its 'y': </label>
-                <input type="number" class="form-control" id="ex" ng-model="input">
+                <input type="number" class="form-control" id="ex" ng-model="input" ng-change="interpolate(findClosest())">
               </div>
               <div class="form-group">
                 <label for="x">Result </label>

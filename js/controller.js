@@ -5,8 +5,7 @@ app.controller("appctrl", function($scope){
     $scope.points = [];
     $scope.input;
     $scope.output;
-    var findClosest = function (){
-      var higherTemp;
+    $scope.findClosest = function (){
 
       for(var i= $scope.points.length-1; i>=0; i--){
         if($scope.points[i].x < $scope.input){
@@ -16,7 +15,7 @@ app.controller("appctrl", function($scope){
       }
     }
 
-    var interpolate = function (closest){
+    $scope.interpolate = function (closest){
         result = {
           x: null,
           y: null
@@ -38,8 +37,8 @@ app.controller("appctrl", function($scope){
       $scope.points.sort(function(a,b){
         return a.x - b.x;
       });
-      interpolate(findClosest());
       $scope.plot();
+
     };
 
     $scope.plot = function () {
